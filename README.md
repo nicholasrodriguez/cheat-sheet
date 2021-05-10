@@ -10,6 +10,7 @@ mount -r -t iso9660 /dev/sr0 /media
 
 ```
 curl http://<URL>/folder/file.txt --output file.txt
+curl http://<URL>/folder/file.txt -o file.txt
 ````
 
 # Git/Hub Config

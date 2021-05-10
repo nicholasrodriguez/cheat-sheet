@@ -8,6 +8,10 @@ List of freqently used but never remembered commands
 mount -r -t iso9660 /dev/sr0 /media
 ```
 
+```
+curl http://<URL>/folder/file.txt --output file.txt
+````
+
 # Git/Hub Config
 
 1. Setup Github ssh keys
@@ -59,4 +63,3 @@ color desert
 ```
 
 # Python
-

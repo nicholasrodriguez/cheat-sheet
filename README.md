@@ -1,4 +1,4 @@
-# Cheet sheet
+# Cheat sheet
 
 List of freqently used but never remembered commands
 

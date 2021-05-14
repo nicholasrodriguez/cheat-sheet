@@ -55,11 +55,25 @@ ansible <HOST> -a "/bin/echo hello"
 ansible-playbook <playbook>.yml --tags <TAG NAME>
 ```
 
-Get Ansible facts direct
+## Get Ansible facts direct
 
 ```
 ansible <hostname> -m ansible.builtin.setup
 ```
+
+## Create Role
+
+```
+ansible-galaxy init --init-path . test-role
+cd test-role
+git add.
+git commit
+git remote add origin git@github.com:nicholasrodriguez/test-role.git
+git branch -M main
+git push -u origin main
+```
+
+Goto [https://galaxy.ansible.com] and import
 
 # .vimrc
 ```

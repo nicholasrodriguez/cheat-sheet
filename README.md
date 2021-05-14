@@ -63,10 +63,13 @@ ansible <hostname> -m ansible.builtin.setup
 
 ## Create Role
 
+Create a repo in Github without readme etc e.g. below using test-role
+
 ```
 ansible-galaxy init --init-path . test-role
 cd test-role
-git add.
+git init
+git add .
 git commit
 git remote add origin git@github.com:nicholasrodriguez/test-role.git
 git branch -M main

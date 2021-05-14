@@ -55,6 +55,12 @@ ansible <HOST> -a "/bin/echo hello"
 ansible-playbook <playbook>.yml --tags <TAG NAME>
 ```
 
+Get Ansible facts direct
+
+```
+ansible <hostname> -m ansible.builtin.setup
+```
+
 # .vimrc
 ```
 set shiftwidth=2

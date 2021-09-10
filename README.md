@@ -3,15 +3,28 @@
 List of freqently used but never remembered commands
 
 # Linux
-
+Mount CDROM
 ```
 mount -r -t iso9660 /dev/sr0 /media
 ```
-
+Curl stuff
 ```
 curl http://<URL>/folder/file.txt --output file.txt
 curl http://<URL>/folder/file.txt -o file.txt
-````
+```
+Install from local CentOS media repo if no internet
+```
+mkdir /media/CentOS
+mount -t iso9660 /dev/cdrom /media/CentOS
+```
+Check repo names in brackets [] in the media repo file
+```
+cat /etc/yum.repos.d/CentOS-Media.repo
+```
+Install from local repo
+```
+yum disablerepo=\* --enablerepo=c8-media-BaseOS --enablerepo=c8-media-AppStream install open-vm-tools
+```
 
 # Git/Hub Config
 

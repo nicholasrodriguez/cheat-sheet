@@ -113,6 +113,10 @@ Run another one
 ```
 sudo docker run -i -t infra-tools bash
 ```
+Connect to a running container
+```
+docker start -ia <CONTAINER ID>
+```
 Export to a file
 ```
 docker save -o infra-tools.tar infra-tools:latest

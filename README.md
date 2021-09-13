@@ -99,4 +99,23 @@ set tabstop=4
 color desert
 ```
 
+# Docker
+Create container interactively
+```
+sudo docker run -i -t centos:8 bash
+```
+Install stuff then exit
+```
+docker ps -a
+docker commit <CONTAINER ID> infra-tools
+```
+Run another one
+```
+sudo docker run -i -t infra-tools bash
+```
+Export to a file
+```
+docker save -o infra-tools.tar infra-tools:latest
+```
+
 # Python

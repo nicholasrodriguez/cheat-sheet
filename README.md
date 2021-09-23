@@ -121,5 +121,13 @@ Export to a file
 ```
 docker save -o infra-tools.tar infra-tools:latest
 ```
+Stop all containers
+```
+docker container stop $(docker container ls -aq)
+```
+Remove all containers
+```
+docker container rm $(docker container ls -aq)
+```
 
 # Python

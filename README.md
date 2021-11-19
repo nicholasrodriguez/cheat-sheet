@@ -100,6 +100,7 @@ color desert
 ```
 
 # Docker
+## Create
 Create container interactively
 ```
 sudo docker run -i -t centos:8 bash
@@ -109,14 +110,41 @@ Install stuff then exit
 docker ps -a
 docker commit <CONTAINER ID> infra-tools
 ```
+## Connect
+Download cert
+```
+mkdir -pv ~/.docker
+unzip cert.zip -d ~/.docker
+```
+Set env var for remote host
+```
+export DOCKER_HOST=tcp://<docker host>:<port> DOCKER_TLS_VERIFY=1
+```
+Or create context and connect remotely
+```
+docker context create \
+    --docker host=ssh://docker-user@host1.example.com \
+    --description="Remote engine" \
+    my-remote-engine
+```
+Switch context
+```
+docker context use my-remote-engine
+```
+## Run containers
 Run another one
 ```
 sudo docker run -i -t infra-tools bash
 ```
-Connect to a running container
+Connect to a stopped container
 ```
 docker start -ia <CONTAINER ID>
 ```
+Connect to a running container
+```
+docker exec -it <container name> /bin/bash
+```
+## Export
 Export to a file
 ```
 docker save -o infra-tools.tar infra-tools:latest

@@ -100,17 +100,18 @@ color desert
 ```
 
 # Docker
-## Create
-Create container interactively
+## Manage Docker as a non-root user
 ```
-sudo docker run -i -t centos:8 bash
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
 ```
-Install stuff then exit
+Test
 ```
-docker ps -a
-docker commit <CONTAINER ID> infra-tools
+docker info
+docker run hello-world
 ```
-## Connect
+## Connect to Remote Docker Engine
 Download cert
 ```
 mkdir -pv ~/.docker
@@ -130,6 +131,16 @@ docker context create \
 Switch context
 ```
 docker context use my-remote-engine
+```
+## Create
+Create container interactively
+```
+sudo docker run -i -t centos:8 bash
+```
+Install stuff then exit
+```
+docker ps -a
+docker commit <CONTAINER ID> infra-tools
 ```
 ## Run containers
 Run another one

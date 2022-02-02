@@ -170,13 +170,6 @@ docker container rm $(docker container ls -aq)
 ```
 # CentOS 8 to Rocky Linux
 https://docs.rockylinux.org/guides/migrate2rocky/
-## Clone
-```
-cd ~
-git clone https://github.com/rocky-linux/rocky-tools.git
-cd rocky-tools/migrate2rocky
-chmod u+x migrate2rocky.sh
-```
 
 ## Prep the box
 Got some odd package clashes on my personal CentOS 8 instances
@@ -187,6 +180,14 @@ sudo yum -y remove containers-common
 sudo yum -y remove containerd.io
 sudo yum -y remove rpm-build
 ```
+## Clone the tools
+```
+cd ~
+git clone https://github.com/rocky-linux/rocky-tools.git
+cd rocky-tools/migrate2rocky
+chmod u+x migrate2rocky.sh
+```
+
 ## Convert to Rocky
 ```
 cd ~/rocky-tools/migrate2rocky

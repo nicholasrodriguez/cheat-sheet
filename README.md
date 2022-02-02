@@ -185,7 +185,7 @@ sudo yum -y remove docker-ce
 sudo yum -y remove docker-ce-cli 
 sudo yum -y remove containers-common
 sudo yum -y remove containerd.io
-sudo yum -y rpm-build
+sudo yum -y remove rpm-build
 ```
 ## Convert to Rocky
 ```

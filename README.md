@@ -182,6 +182,7 @@ chmod u+x migrate2rocky.sh
 Got some odd package clashes on my personal CentOS 8 instances
 ```
 sudo yum -y remove docker-ce
+sudo yum -y remove docker-ce-cli 
 sudo yum -y remove containers-common
 sudo yum -y remove containerd.io
 sudo yum -y rpm-build

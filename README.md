@@ -100,17 +100,33 @@ color desert
 ```
 
 # Docker
-## Manage Docker as a non-root user
+## Install
 ```
-sudo groupadd docker
+sudo dnf install -y yum-utils
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo dnf -y install docker-ce docker-ce-cli containerd.io
+sudo systemctl enable --now docker
+```
+Manage Docker as a non-root user
+```
 sudo usermod -aG docker $USER
 newgrp docker
 ```
-Test
+Test Docker
 ```
 docker info
 docker run hello-world
 ```
+Install Docker Compose
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+Test docker-compose
+```
+docker-compose --version
+```
+
 ## Connect to Remote Docker Engine
 Download cert
 ```

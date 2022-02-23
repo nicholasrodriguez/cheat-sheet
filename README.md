@@ -25,6 +25,10 @@ Install from local repo
 ```
 yum disablerepo=\* --enablerepo=c8-media-BaseOS --enablerepo=c8-media-AppStream install open-vm-tools
 ```
+List Open Files and Ports
+```
+lsof -i -P -n | grep <PORT NUMBER>
+```
 
 # Git/Hub Config
 

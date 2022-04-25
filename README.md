@@ -64,6 +64,11 @@ git config --global user.email "<NAME>@users.noreply.github.com"
 git config --global user.name "<NAME>"
 ````
 
+Run Git pull over subdirectories
+```
+for i in */.git; do ( echo $i; cd $i/..; git pull; ); done
+```
+
 # Ansible
 
 ```

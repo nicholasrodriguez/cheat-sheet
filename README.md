@@ -231,4 +231,12 @@ cd ~/rocky-tools/migrate2rocky
 sudo ./migrate2rocky.sh -r
 ```
 
+# Terraform
+
+## Windows Install
+Plop the executable in 
+```
+C:\Users\<USER NAME>\AppData\Local\Microsoft\WindowsApps
+```
+
 # Python

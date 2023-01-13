@@ -192,6 +192,10 @@ Connect to a running container
 ```
 docker exec -it <container name> /bin/bash
 ```
+Mount local filesystem to a container
+```
+docker run -it -v $(pwd)/:/mnt/ mcr.microsoft.com/azurestack/powershell
+```
 ## Export
 Export to a file
 ```
